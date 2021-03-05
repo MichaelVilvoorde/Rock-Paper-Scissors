@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Rock Paper Scissors</title>
 </head>
-<body>
-    <h1 class="bg-blue-100">Rock Paper Scissors</h1>
-    <h2>test test</h2>
+<body class="bg-black-2 text-secondary text-center">
+    <main>
+        <h1 class="text-3xl md:text-5xl px-2 py-12 md:py-8"><span class="text-primary">R</span>ock <span class="text-primary">P</span>aper <span class="text-primary">S</span>cissors</h1>
+
+        <h4 class="p-2 text-lg md:text-2xl">Rules: First to <span class="text-primary">5</span> Wins!</h4>
+
+        <div class="px-2 py-12">
+            <h2 class="text-2xl md:text-4xl">Score</h2>
+            
+            <div class="flex justify-center">
+                <h2 class="text-2xl md:text-4xl py-1 px-3 border-r-4 border-primary">human</h2>
+                <h2 class="text-2xl md:text-4xl py-1 px-3">comp</h2>
+            </div>
+        </div>
+
+
+        <h2 class="text-2xl md:text-4xl p-2 md:pt-10">Result round</h2>
+
+        <div class="text-primary p-2">
+            <button class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
+            <button class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
+            <button class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
+        </div>
+        
+        <h4 class="text-lg md:text-2xl p-2">Take your pick!</h4>
+
+    </main>
+
+    <footer class="bg-primary fixed bottom-0 w-full p-2 text-sm md:text-base">
+        <p>Designed and Developed by Michael Baeyens</p>
+    </footer>
+
+   
+    
+    
+    <script src="main.js"></script>
+
 </body>
 </html>
