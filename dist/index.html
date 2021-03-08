@@ -30,12 +30,12 @@
         
 
         <div class="text-primary p-2">
-            <button id="playButton" onclick="rock()" class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
-            <button id="playButton" onclick="paper()" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
-            <button id="playButton" onclick="scissors()" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
+            <button id="playButton" onclick="rock(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
+            <button id="playButton" onclick="paper(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
+            <button id="playButton" onclick="scissors(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
         </div>
         
-        <h4 class="text-lg md:text-2xl p-2">Take your pick!</h4>
+        <h4 id="finalResult" class="text-lg md:text-2xl p-2">Take your pick!</h4>
 
     </main>
 
