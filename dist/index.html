@@ -18,18 +18,21 @@
             <h2 class="text-2xl md:text-4xl">Score</h2>
             
             <div class="flex justify-center">
-                <h2 class="text-2xl md:text-4xl py-1 px-3 border-r-4 border-primary">human</h2>
-                <h2 class="text-2xl md:text-4xl py-1 px-3">comp</h2>
+                <h2 id="humanScore" class="text-2xl md:text-4xl py-1 px-3 border-r-4 border-primary">0</h2>
+                <h2 id="computerScore" class="text-2xl md:text-4xl py-1 px-3">0</h2>
             </div>
         </div>
 
 
-        <h2 class="text-2xl md:text-4xl p-2 md:pt-10">Result round</h2>
+        <h2 id="result" class="text-lg md:text-2xl p-2 md:pt-10">Result round</h2>
+        <h2 id="outcome" class="text-lg md:text-2xl p-2"></h2>
+
+        
 
         <div class="text-primary p-2">
-            <button class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
-            <button class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
-            <button class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
+            <button onclick="rock()" class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
+            <button onclick="paper()" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
+            <button onclick="scissors()" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
         </div>
         
         <h4 class="text-lg md:text-2xl p-2">Take your pick!</h4>
