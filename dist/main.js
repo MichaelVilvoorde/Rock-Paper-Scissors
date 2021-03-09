@@ -5,6 +5,7 @@ const choices = [
     ["scissors"] 
   ];
 
+  document.getElementById("playAgainButton").style.visibility = "hidden";
 
 
 function rock() {
@@ -12,7 +13,7 @@ function rock() {
     CompChoice = choices[Math.floor(Math.random() * choices.length)];
     console.log(CompChoice);
 
-    document.getElementById("result").innerHTML = "You picked: rock." + " " + "The computer picked: " + CompChoice;
+    document.getElementById("result").innerHTML = "You picked: rock." + " " + "The AI picked: " + CompChoice;
 
     humanScore = document.getElementById("humanScore").innerHTML;
     computerScore = document.getElementById("computerScore").innerHTML;
@@ -38,7 +39,7 @@ function paper() {
     CompChoice = choices[Math.floor(Math.random() * choices.length)];
     console.log(CompChoice);
    
-    document.getElementById("result").innerHTML = "You picked: paper." + " " + "The computer picked: " + CompChoice;
+    document.getElementById("result").innerHTML = "You picked: paper." + " " + "The AI picked: " + CompChoice;
 
     humanScore = document.getElementById("humanScore").innerHTML;
     computerScore = document.getElementById("computerScore").innerHTML;
@@ -65,7 +66,7 @@ function scissors() {
     CompChoice = choices[Math.floor(Math.random() * choices.length)];
     console.log(CompChoice);
 
-    document.getElementById("result").innerHTML = "You picked: scissors." + " " + "The computer picked: " + CompChoice;   
+    document.getElementById("result").innerHTML = "You picked: scissors." + " " + "The AI picked: " + CompChoice;   
     
     humanScore = document.getElementById("humanScore").innerHTML;
     computerScore = document.getElementById("computerScore").innerHTML;
@@ -95,18 +96,34 @@ function maxScoreCheck(){
     if (computerScore == 5) {
         document.getElementById("finalResult").innerHTML = "Sorry, you losed the game :(";
         document.getElementById("playButton").disabled = true;
-        // document.getElementById("outcome").style.visibility = "hidden";
+        document.getElementById("playButton2").disabled = true;
+        document.getElementById("playButton3").disabled = true;
+        document.getElementById("playAgainButton").style.visibility = "visible";
     }
     
     if (humanScore == 5) {
         document.getElementById("finalResult").innerHTML = "Congratulations, you win the game :)";
         document.getElementById("playButton").disabled = true;
+        document.getElementById("playButton2").disabled = true;
+        document.getElementById("playButton3").disabled = true;
+        document.getElementById("playAgainButton").style.visibility = "visible";
         
     }
 
     
     console.log(humanScore);
     console.log(computerScore);
+
+}
+
+
+function playAgain() {
+    document.getElementById("humanScore").innerHTML = 0;
+    document.getElementById("computerScore").innerHTML = 0;
+    document.getElementById("playButton").disabled = false;
+    document.getElementById("playButton2").disabled = false;
+    document.getElementById("playButton3").disabled = false;
+    
 
 }
 

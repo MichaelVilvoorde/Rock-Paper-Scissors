@@ -10,32 +10,37 @@
 </head>
 <body class="bg-black-2 text-secondary text-center">
     <main>
-        <h1 class="text-3xl md:text-5xl px-2 py-12 md:py-8"><span class="text-primary">R</span>ock <span class="text-primary">P</span>aper <span class="text-primary">S</span>cissors</h1>
+        <h1 class="text-3xl md:text-5xl px-2 pt-12 pb-4 md:pt-8"><span class="text-primary">R</span>ock <span class="text-primary">P</span>aper <span class="text-primary">S</span>cissors</h1>
 
         <h4 class="p-2 text-lg md:text-2xl">Rules: First to <span class="text-primary">5</span> Wins!</h4>
 
-        <div class="px-2 py-12">
-            <h2 class="text-2xl md:text-4xl">Score</h2>
+        <div class="px-2 py-6 md:py-4">
+            <h2 class="text-3xl md:text-4xl">Score</h2>
             
             <div class="flex justify-center">
-                <h2 id="humanScore" class="text-2xl md:text-4xl py-1 px-3 border-r-4 border-primary">0</h2>
-                <h2 id="computerScore" class="text-2xl md:text-4xl py-1 px-3">0</h2>
+                <h2 id="humanScore" class="text-3xl md:text-4xl py-1 px-3 border-r-4 border-primary">0</h2>
+                <h2 id="computerScore" class="text-3xl md:text-4xl py-1 px-3">0</h2>
             </div>
         </div>
 
 
-        <h2 id="result" class="text-lg md:text-2xl p-2 md:pt-10">Result round</h2>
+        <h2 id="result" class="text-lg md:text-2xl p-2 pb-0"><i class="fas fa-arrow-down text-primary px-2 py-2 md:p-4"></i> Click the icons to play <i class="fas fa-arrow-down text-primary px-2 py-2 md:p-4"></i></h2>
         <h2 id="outcome" class="text-lg md:text-2xl p-2"></h2>
 
         
 
         <div class="text-primary p-2">
             <button id="playButton" onclick="rock(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
-            <button id="playButton" onclick="paper(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
-            <button id="playButton" onclick="scissors(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
+            <button id="playButton2" onclick="paper(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
+            <button id="playButton3" onclick="scissors(); maxScoreCheck();" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
         </div>
         
         <h4 id="finalResult" class="text-lg md:text-2xl p-2">Take your pick!</h4>
+
+        <div class="p-2">
+            <button id="playAgainButton" onclick="playAgain()" class="bg-primary rounded-lg p-2 ">Play again!</button>
+        </div>
+        
 
     </main>
 
