@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <title>Rock Paper Scissors</title>
-</head>
-<body class="bg-black-2 text-secondary text-center">
+  </head>
+  <body class="text-center bg-black-2 text-secondary">
     <main>
-        <h1 class="text-3xl md:text-5xl px-2 pt-12 pb-4 md:pt-8"><span class="text-primary">R</span>ock <span class="text-primary">P</span>aper <span class="text-primary">S</span>cissors</h1>
+      <h1 class="px-2 pt-12 pb-4 text-3xl md:text-5xl md:pt-8">
+        <span class="text-primary">R</span>ock
+        <span class="text-primary">P</span>aper
+        <span class="text-primary">S</span>cissors
+      </h1>
 
-        <h4 class="p-2 text-lg md:text-2xl">Rules: First to <span class="text-primary">5</span> Wins!</h4>
+      <h4 class="p-2 text-lg md:text-2xl">
+        Rules: First to <span class="text-primary">5</span> Wins!
+      </h4>
 
-        <div class="px-2 py-6 md:py-4">
-            <h2 class="text-3xl md:text-4xl">Score</h2>
-            
-            <div class="flex justify-center">
-                <h2 id="humanScore" class="text-3xl md:text-4xl py-1 px-3 border-r-4 border-primary">0</h2>
-                <h2 id="computerScore" class="text-3xl md:text-4xl py-1 px-3">0</h2>
-            </div>
+      <div class="px-2 py-6 md:py-4">
+        <h2 id="score" class="text-3xl md:text-4xl">Score</h2>
+
+        <div class="flex justify-center">
+          <h2
+            id="humanScore"
+            class="px-3 py-1 text-3xl border-r-4 md:text-4xl border-primary"
+          >
+            0
+          </h2>
+          <h2 id="computerScore" class="px-3 py-1 text-3xl md:text-4xl">0</h2>
         </div>
+      </div>
 
+      <h2 id="result" class="p-2 pb-0 text-lg md:text-2xl">
+        <i class="px-2 py-2 fas fa-arrow-down text-primary md:p-4"></i> Click
+        the icons to play
+        <i class="px-2 py-2 fas fa-arrow-down text-primary md:p-4"></i>
+      </h2>
+      <h2 id="outcome" class="p-2 text-lg md:text-2xl"></h2>
 
-        <h2 id="result" class="text-lg md:text-2xl p-2 pb-0"><i class="fas fa-arrow-down text-primary px-2 py-2 md:p-4"></i> Click the icons to play <i class="fas fa-arrow-down text-primary px-2 py-2 md:p-4"></i></h2>
-        <h2 id="outcome" class="text-lg md:text-2xl p-2"></h2>
+      <div class="p-2 text-primary">
+        <button id="rock" onclick="next(3);" class="p-4 md:px-16">
+          <i class="far fa-hand-rock fa-3x"></i>
+        </button>
+        <button id="paper" onclick="next(2);" class="p-4 md:px-16">
+          <i class="far fa-hand-paper fa-3x"></i>
+        </button>
+        <button id="scissors" onclick="next(1);" class="p-4 md:px-16">
+          <i class="far fa-hand-scissors fa-3x"></i>
+        </button>
+      </div>
 
-        
+      <h4 id="finalResult" class="p-2 text-lg md:text-2xl">Take your pick!</h4>
 
-        <div class="text-primary p-2" onclick="maxScoreCheck();">
-            <button id="rock" onclick="singleRound(this.id);" class="p-4 md:px-16"><i class="far fa-hand-rock fa-3x"></i></button>
-            <button id="paper" onclick="singleRound(this.id);" class="p-4 md:px-16"><i class="far fa-hand-paper fa-3x"></i></button>
-            <button id="scissors" onclick="singleRound(this.id);" class="p-4 md:px-16"><i class="far fa-hand-scissors fa-3x"></i></button>
-        </div>
-        
-        <h4 id="finalResult" class="text-lg md:text-2xl p-2">Take your pick!</h4>
-
-        <div class="p-2">
-            <button id="playAgainButton" onclick="playAgain()" class="bg-primary rounded-lg p-2 ">Play again!</button>
-        </div>
-        
-
+      <div class="p-2">
+        <button
+          id="playAgainButton"
+          onclick="reset()"
+          class="p-2 rounded-lg bg-primary"
+        >
+          reset
+        </button>
+      </div>
     </main>
 
-    <footer class="bg-primary fixed bottom-0 w-full p-2 text-sm md:text-base">
-        <p>Designed and Developed by Michael Baeyens</p>
+    <footer class="fixed bottom-0 w-full p-2 text-sm bg-primary md:text-base">
+      <p>Designed and Developed by Michael Baeyens</p>
     </footer>
 
-   
-    
-    
-    <script src="main.js"></script>
-
-</body>
+    <script src="../game.js"></script>
+  </body>
 </html>
