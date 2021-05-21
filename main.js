@@ -70,7 +70,7 @@ function maxScoreCheck(){
         document.getElementById("playAgainButton").style.visibility = "visible";
 
         if (computerScore == 5) {
-            document.getElementById("finalResult").innerHTML = "Sorry, you losed the game :(";
+            document.getElementById("finalResult").innerHTML = "Sorry, you lost the game :(";
         }
         
         if (humanScore == 5) {
